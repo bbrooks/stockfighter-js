@@ -8,7 +8,9 @@ This project includes a simple node server that will proxy your client-sides AJA
 
 1. Install node
 2. Clone or download this repo. 
-3. In your terminal, `cd` into `stockfighter-js` and run `node server.js`
+3. In your terminal, `cd` into `stockfighter-js`
+4. Run `npm install` to install dependencies
+5. Run `node server.js` to start the server
 4. Visit `127.0.0.1:8000` in your browser
 5. Open up the console and start firing [commands](#usage) at the stockfighter api!
 
