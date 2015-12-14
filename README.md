@@ -1,6 +1,6 @@
 # Stockfighter JS
 
-A simple client-side JS client for [stockfighter.io](https://starfighter.io) ported from [jenius's stockfighter node api wrapper](https://github.com/jenius/stockfighter-node). Props to [jenius](https://github.com/jenius/) for the great work on the code and the documentation!
+A simple client-side JS client for [stockfighter.io](https://www.stockfighter.io/) ported from [jenius's stockfighter node api wrapper](https://github.com/jenius/stockfighter-node). Props to [jenius](https://github.com/jenius/) for the great work on the code and the documentation!
 
 This project includes a simple node server that will proxy your client-side AJAX calls and allow you to play the game from chrome's browser console.
 
