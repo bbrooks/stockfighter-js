@@ -2,7 +2,7 @@
 
 A simple client-side JS client for [stockfighter.io](https://starfighter.io) ported from [jenius's stockfighter node api wrapper](https://github.com/jenius/stockfighter-node). Props to [jenius](https://github.com/jenius/) for the great work on the code and the documentation!
 
-This project includes a simple node server that will proxy your client-side AJAX calls and allow you to play the game from your favorite browser console.
+This project includes a simple node server that will proxy your client-side AJAX calls and allow you to play the game from chrome's browser console.
 
 ### Installation
 
@@ -11,7 +11,7 @@ This project includes a simple node server that will proxy your client-side AJAX
 3. In your terminal, `cd` into the repo folder (wherever `server.js` is)
 4. Run `npm install` to install project dependencies
 5. Run `node server.js` to start the server
-4. Visit [127.0.0.1:8000](http://127.0.0.1:8000) in your browser
+4. Visit [127.0.0.1:8000](http://127.0.0.1:8000) in chrome
 5. Open up the console and start firing [commands](#usage) at the stockfighter api!
 
 ### Usage
