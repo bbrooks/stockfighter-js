@@ -5,6 +5,17 @@
     <meta charset="utf-8">
     <script src='./js/vendor/axios.js'></script>
     <script src='./js/stockfighter-client.js'></script>
+    <script>
+      console.info('Ready to Stockfight!');
+      console.log('To get started, try getting a quote for a stock:');
+    console.log(`
+      var client = new ApiClient('**your api key**');
+      client.quote({venue: 'TESTEX', stock: 'FOOBAR'})
+        .then(function(response){
+          console.log("Response From API:", response)
+        });
+    `);
+    </script>
   </head>
   <body>
     <div style="text-align:center; font-size: 33px; margin-top:30px; font-family: sans-serif">Stockfighter JS <br> (open your console)</div>
