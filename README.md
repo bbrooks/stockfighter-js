@@ -110,7 +110,7 @@ See all orders in a given account's history ([official docs](https://starfighter
 - **stock** (String): optional - show only orders for this specific stock
 
 #### client.listen_for_quotes(opts)
-Get updated when a stock quote is updated ([official docs](https://starfighter.readme.io/docs/quotes-ticker-tape-websocket)
+Get updated when a stock quote is updated ([official docs](https://starfighter.readme.io/docs/quotes-ticker-tape-websocket))
 
 ##### Options
 - **venue** (String): symbol for stock exchange
@@ -119,7 +119,7 @@ Get updated when a stock quote is updated ([official docs](https://starfighter.r
 - **stock** (String): optional - show only quotes for this specific stock
 
 #### client.listen_for_fills(opts)
-Get updated when a fill ([official docs](https://starfighter.readme.io/docs/executions-fills-websocket)
+Get updated when a fill ([official docs](https://starfighter.readme.io/docs/executions-fills-websocket))
 
 ##### Options
 - **venue** (String): symbol for stock exchange
