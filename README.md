@@ -109,6 +109,24 @@ See all orders in a given account's history ([official docs](https://starfighter
 - **account** (String): account to view orders for
 - **stock** (String): optional - show only orders for this specific stock
 
+#### client.listen_for_quotes(opts)
+Get updated when a stock quote is updated ([official docs](https://starfighter.readme.io/docs/quotes-ticker-tape-websocket)
+
+##### Options
+- **venue** (String): symbol for stock exchange
+- **account** (String): account to view orders for
+- **cb** (Function): callback function for when a new quote comes in
+- **stock** (String): optional - show only quotes for this specific stock
+
+#### client.listen_for_fills(opts)
+Get updated when a fill ([official docs](https://starfighter.readme.io/docs/executions-fills-websocket)
+
+##### Options
+- **venue** (String): symbol for stock exchange
+- **account** (String): account to view orders for
+- **cb** (Function): callback function for when a new fill comes in
+- **stock** (String): optional - show only fills for this specific stock
+
 ### License and Contributing
 
 This project is licensed under MIT.

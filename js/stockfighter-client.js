@@ -204,4 +204,48 @@ class ApiClient {
     return axios(opts);
   }
 
+  /**
+   * Listen for incoming quotes and execute a callback
+   * @param {String} opts.venue - symbol for stock exchange
+   * @param {String} opts.account - account number
+   * @param {String} opts.stock - symbol for stock
+   * @param {String} opts.cb - callback that takes quote response object
+   */
+  listen_for_quotes (opts) {
+    let urlConfig = opts.stock
+    ? `wss:\/\/www.stockfighter.io/ob/api/ws/${opts.account}/venues/${opts.venue}/tickertape/stocks/${opts.stock}`
+    : `wss:\/\/www.stockfighter.io/ob/api/ws/${opts.account}/venues/${opts.venue}/tickertape`
+
+    return this._connect_to_ws(urlConfig, opts.cb);
+  }
+
+  /**
+  * Listen for incoming order fills
+  * @param {String} opts.venue - symbol for stock exchange
+  * @param {String} opts.account - account number
+  * @param {String} opts.stock - symbol for stock
+  * @param {String} opts.cb - callback that takes fill response object
+  */
+  listen_for_fills (opts) {
+    let urlConfig = opts.stock
+    ? `wss:\/\/www.stockfighter.io/ob/api/ws/${opts.account}/venues/${opts.venue}/executions/stocks/${opts.stock}`
+    : `wss:\/\/www.stockfighter.io/ob/api/ws/${opts.account}/venues/${opts.venue}/executions`
+    
+    return this._connect_to_ws(urlConfig, opts.cb);
+  }
+
+  _connect_to_ws(url, cb) {
+    var sock = new WebSocket(url);
+    var decoratedCb = function(msg) {
+      try {
+        let msgObj = JSON.parse(msg.data);
+        return cb(msgObj);
+      } catch(err) {
+        return console.error(`Socket for ${url} returned unexpected data`, err);
+      }
+    }
+    sock.onmessage = decoratedCb;
+    return sock;
+  }
+
 }
